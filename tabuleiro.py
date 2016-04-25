@@ -4,7 +4,9 @@ from jogo import jogo
 
 class tabuleiro:
     
-    def __init__(self):        
+    def __init__(self):   
+        self.jogo = jogo()
+        
         self.window = tk.Tk()
         self.window.title("Jogo da Velha")
         self.window.geometry('300x330+850+50')
@@ -42,7 +44,7 @@ class tabuleiro:
         
         self.botao_2x0 = tk.Button(self.window)
         self.botao_2x0.grid(row=2, column=0, sticky='nsew')
-        self.botao_2x0.configure(command=self.clica20)
+        self.botao_2x0.configure(command=self.clicar20)
         
         self.botao_2x1 = tk.Button(self.window)
         self.botao_2x1.grid(row=2, column=1, sticky='nsew')
@@ -206,6 +208,15 @@ class tabuleiro:
                 self.limpa_tela()
     
     def limpa_tela(self):
+        self.botao_0x0.configure(text='')
+        self.botao_0x1.configure(text='')
+        self.botao_0x2.configure(text='')
+        self.botao_1x0.configure(text='')
+        self.botao_1x1.configure(text='')
+        self.botao_1x2.configure(text='')
+        self.botao_2x0.configure(text='')
+        self.botao_2x1.configure(text='')
+        self.botao_2x2.configure(text='')
         
     
 
