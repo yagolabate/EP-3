@@ -11,7 +11,7 @@ class jogo:
         
         self.jogador = 1                        #jogador atual. Quando 1 é X, quando 2 é O
         
-        self.contador = 0
+        self.contador = 0                  #contador de jogadas
     
     def recebe_jogada(self, linha, coluna):
         self.tabuleiro_jogo[linha][coluna] = self.jogador #define a posição jogada e o jogador que a jogou
